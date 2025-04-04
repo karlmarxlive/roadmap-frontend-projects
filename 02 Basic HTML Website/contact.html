@@ -6,7 +6,7 @@
     <title>Egor Savenko Contacts</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Homepage of Egor Savenko, a Software Engineer." />
+    <meta name="description" content="Contact Egor Savenko, a Software Engineer." />
     <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Resume, Web Development, Full Stack Developer" />
     <meta name="author" content="Egor Savenko" />
     <!-- Open Graph Meta Tags -->
@@ -21,7 +21,7 @@
      <header>
         <img src="https://res.cloudinary.com/duidrgg1k/image/upload/v1725421776/male-technologist_n0fbey.png" class="profile-image"> <p>Egor Savenko</p>
         <nav>
-            <p><a href="index.html">Home</a> / <a href="projects.html">Projects</a> / <a href="articles.html">Articles</a> / <a href="contact.html">Contact</a></p>
+            <p><a href="./index.html">Home</a> / <a href="./projects.html">Projects</a> / <a href="./articles.html">Articles</a> / <a href="./contact.html">Contact</a></p>
         </nav> 
         <h1>Full Stack Developer</h1>
         <p><em>Passionate about web development</em></p>
@@ -29,6 +29,19 @@
      <main>
         <p>Tg: <a href="https://t.me/egor_savenko">@egor_savenko</a></p>
         <p>Email: <a href="mailto:egor.savenko@bk.ru">egor.savenko@bk.ru</a></p>
+        <p>Or you can contact me via this form</p>
+        <form action="/submit" method="POST">
+            <label for="name">Name:</label>
+            <input id="name" type="text" name="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="email" required>
+            <br><br>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <br><br>
+            <button type="submit">Send</button>
+        </form>
      </main>
      <footer>
         <p>© 2025 Egor Savenko</p>
