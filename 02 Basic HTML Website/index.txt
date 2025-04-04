@@ -21,7 +21,7 @@
      <header>
         <img src="https://res.cloudinary.com/duidrgg1k/image/upload/v1725421776/male-technologist_n0fbey.png" class="profile-image"> <p>Egor Savenko</p>
         <nav>
-            <p><a href="index.html">Home</a> / <a href="projects.html">Projects</a> / <a href="articles.html">Articles</a> / <a href="contact.html">Contact</a></p>
+            <p><a href="./index.html">Home</a> / <a href="./projects.html">Projects</a> / <a href="./articles.html">Articles</a> / <a href="./contact.html">Contact</a></p>
         </nav> 
         <h1>Egor Savenko — Full Stack Developer</h1>
         <p><em>Passionate about web development</em></p>

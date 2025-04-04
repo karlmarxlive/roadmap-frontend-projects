@@ -6,7 +6,7 @@
         <title>Egor Savenko CV</title>
         <!-- SEO Meta Tags -->
         <meta name="description" content="Single Page CV of Egor Savenko, a Software Engineer." />
-        <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Resume, Web Development, Full Stack Developer" />
+        <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Resume, Web Development, Full Stack Developer, Junior, Freelance" />
         <meta name="author" content="Egor Savenko" />
         <!-- Open Graph Meta Tags -->
         <meta property="og:title" content="Egor Savenko - Software Engineer" />
@@ -17,7 +17,6 @@
         <link rel="icon" href="https://res.cloudinary.com/duidrgg1k/image/upload/v1725421776/male-technologist_n0fbey.png" type="image/x-icon" />
     </head>
     <body>
-        <hr>
         <main>
             <header>
                 <h1>Egor Savenko</h1>
@@ -49,7 +48,13 @@
             <section class="experience">
                 <h2>Experience</h2>
                 <h3>Freelance</h3>
+                <p>
+                    Developed responsive websites for small businesses using HTML, CSS, and JavaScript.
+                </p>
             </section>
         </main>
+        <footer>
+            <p>© 2025 Egor Savenko</p>
+         </footer>
     </body>
 </html>
