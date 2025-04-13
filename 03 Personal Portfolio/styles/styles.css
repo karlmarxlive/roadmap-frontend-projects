@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --background-color: #F1EFEC;
+    --text-color: #030303;
+    --decorated-background-color: #D4C9BE;
+    --accent-color: #123458;
+    --text-font: "Roboto";
+    --header-font: "Raleway";
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--text-color);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    margin-top: 100px;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.nav-bar {
+    display: flex;
+    background-color: var(--decorated-background-color);
+    position: fixed;
+}
+
+.nav-bar > ul {
+    list-style: "/";
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
