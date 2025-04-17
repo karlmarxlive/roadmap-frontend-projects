@@ -8,28 +8,38 @@
     --header-font: "Raleway";
 }
 
+html {
+    font-size: 10px;
+}
+
 * {
     box-sizing: border-box;
-    color: var(--text-color);
     margin: 0;
+    color: var(--text-color);
 }
 
 a {
     text-decoration: none;
 }
 
-header {
-    margin-top: 100px;
+a:active {
+    color: var(--accent-color);
 }
 
 body {
     background-color: var(--background-color);
+    font-family: var(--text-font), sans-serif;
 }
 
 .nav-bar {
     display: flex;
     background-color: var(--decorated-background-color);
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
 }
 
 .nav-bar > ul {
@@ -37,4 +47,84 @@ body {
     width: 100vw;
     display: flex;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+}
+
+header {
+    text-align: center;
+    padding-top: 80px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: var(--header-font), serif;
+    color: var(--accent-color);
+}
+
+h2 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    font-family: var(--header-font), serif;
+    border-bottom: 1px solid var(--decorated-background-color);
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+.subheader {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: var(--header-font), serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.flex-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+section {
+    background-color: var(--decorated-background-color);
+    border-radius: 10px;
+    width: 30vw;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+    
 }
