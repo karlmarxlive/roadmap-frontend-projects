@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="light">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -16,31 +16,94 @@
     <meta property="og:type" content="website">
     <!-- Favicon -->
     <link rel="icon" href="https://res.cloudinary.com/duidrgg1k/image/upload/v1725421776/male-technologist_n0fbey.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-     <header>
-        <nav>
-            <p><a href="./index.html">Home</a> / <a href="./projects.html">Projects</a> / <a href="./articles.html">Articles</a> / <a href="./contact.html">Contact</a></p>
-        </nav> 
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-12c-.28 0-.5-.22-.5-.5V2c0-.28.22-.5.5-.5s.5.22.5.5v2.5c0 .28-.22.5-.5.5zm0 14c-.28 0-.5.22-.5.5V22c0 .28.22.5.5.5s.5-.22.5-.5v-2.5c0-.28-.22-.5-.5-.5zM3.5 12c0 .28-.22.5-.5.5H.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5H3c.28 0 .5.22.5.5zm18 0c0 .28.22.5.5.5h2.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5H22c-.28 0-.5.22-.5.5z"/>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;">
+            <path d="M12 3c.28 0 .5-.22.5-.5V.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0 .28.22.5.5.5zm0 18c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5zM3.5 12c0-.28-.22-.5-.5-.5H.5c-.28 0-.5.22-.5.5s.22.5.5.5H3c.28 0 .5-.22.5-.5zm18 0c0 .28.22.5.5.5h2.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5H22c-.28 0-.5.22-.5.5z"/>
+        </svg>
+    </button>
+    <header>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="./index.html">home</a></li>
+                <li><a href="./projects.html">projects</a></li>
+                <li><a href="./articles.html">articles</a></li>
+                <li><a href="./contact.html">contact</a></li>
+            </ul>
+        </nav>
         <h1>The Stuff I Write</h1>
-     </header>  
-     <main>
-        <p>My personal telegram-channel: <a href="https://t.me/not_so_personal">@not_so_personal</a></p>
-        <article>
-            <h2>Article 1</h2>
-            <p>Article description</p>
-        </article>
-        <article>
-            <h2>Article 2</h2>
-            <p>Article description</p>
-        </article>
-        <article>
-            <h2>Article 3</h2>
-            <p>Article description</p>
-        </article>
-     </main>
-     <footer>
+        <p class="subheader">Thoughts and insights on web development</p>
+    </header>
+    <main>
+        <div class="flex-container">
+            <section class="social-links">
+                <h2>Follow My Writing</h2>
+                <p>My personal telegram-channel: <a href="https://t.me/not_so_personal">@not_so_personal</a></p>
+            </section>
+            <article class="article-card">
+                <h2>Article 1</h2>
+                <p>Article description</p>
+                <div class="article-meta">
+                    <span class="date">March 15, 2024</span>
+                    <a href="#" class="button">Read More</a>
+                </div>
+            </article>
+            <article class="article-card">
+                <h2>Article 2</h2>
+                <p>Article description</p>
+                <div class="article-meta">
+                    <span class="date">March 10, 2024</span>
+                    <a href="#" class="button">Read More</a>
+                </div>
+            </article>
+            <article class="article-card">
+                <h2>Article 3</h2>
+                <p>Article description</p>
+                <div class="article-meta">
+                    <span class="date">March 5, 2024</span>
+                    <a href="#" class="button">Read More</a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer>
         <p>© 2025 Egor Savenko</p>
-     </footer>
+    </footer>
+    <script>
+        // Theme switching functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateIcons(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcons(newTheme);
+        });
+
+        function updateIcons(theme) {
+            if (theme === 'light') {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>

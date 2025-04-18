@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset='utf-8'>
@@ -24,6 +24,14 @@
 </head>
 
 <body>
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-12c-.28 0-.5-.22-.5-.5V2c0-.28.22-.5.5-.5s.5.22.5.5v2.5c0 .28-.22.5-.5.5zm0 14c-.28 0-.5.22-.5.5V22c0 .28.22.5.5.5s.5-.22.5-.5v-2.5c0-.28-.22-.5-.5-.5zM3.5 12c0 .28-.22.5-.5.5H.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5H3c.28 0 .5.22.5.5zm18 0c0 .28.22.5.5.5h2.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5H22c-.28 0-.5.22-.5.5z"/>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;">
+            <path d="M12 3c.28 0 .5-.22.5-.5V.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5v2c0 .28.22.5.5.5zm0 18c-.28 0-.5.22-.5.5v2c0 .28.22.5.5.5s.5-.22.5-.5v-2c0-.28-.22-.5-.5-.5zM3.5 12c0-.28-.22-.5-.5-.5H.5c-.28 0-.5.22-.5.5s.22.5.5.5H3c.28 0 .5-.22.5-.5zm18 0c0 .28.22.5.5.5h2.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5H22c-.28 0-.5.22-.5.5z"/>
+        </svg>
+    </button>
     <header>
         <nav class="nav-bar">
             <ul>
@@ -40,44 +48,120 @@
         <div class="flex-container">
             <section id="section-projects">
                 <h2>Projects</h2>
-                <ul>
-                    <li><a href="#">Project 1</a></li>
-                    <li><a href="#">Project 2</a></li>
-                    <li><a href="#">Project 3</a></li>
-                </ul>
-                <p><a href="projects.html">Check out my other projects</a></p>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h3>Project 1</h3>
+                        <p class="project-description">A brief description of the project and its key features.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 2</h3>
+                        <p class="project-description">Another amazing project showcasing different skills.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 3</h3>
+                        <p class="project-description">A full-stack application with modern technologies.</p>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">GraphQL</span>
+                        </div>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                <a href="projects.html" class="view-more">View all projects →</a>
             </section>
             <section id="section-work">
-                <h2>Work experience</h2>
+                <h2>Work Experience</h2>
                 <article class="job-summary">
                     <h3>Frontend Developer</h3>
                     <p>Company 1</p>
-                    <p>From 2022 to 2023</p>
-                    <p>Job description</p>
+                    <p>2022 - 2023</p>
+                    <p>Built responsive web applications using modern JavaScript frameworks and implemented pixel-perfect designs.</p>
+                </article>
+                <article class="job-summary">
                     <h3>Frontend Developer</h3>
                     <p>Company 2</p>
-                    <p>From 2022 to 2023</p>
-                    <p>Job description</p>
+                    <p>2021 - 2022</p>
+                    <p>Developed and maintained client websites, focusing on performance optimization and SEO best practices.</p>
                 </article>
-            </section id="section-education">
-            <section>
+            </section>
+            <section id="section-education">
                 <h2>Education</h2>
-                <h3>Novosibirsk State University</h3>
-                <p>2015 — 2020</p>
-                <p>Bachelor of Physics</p>
-                <h3>Courses</h3>
-                <ul>
-                    <li>CS50</li>
-                    <li>freeCodeCamp</li>
-                    <li>And something else</li>
-                </ul>
+                <div class="education-item">
+                    <h3>Novosibirsk State University</h3>
+                    <p class="education-period">2015 — 2020</p>
+                    <p class="education-degree">Bachelor of Physics</p>
+                    <p class="education-description">Studied fundamental physics, mathematics, and computer science.</p>
+                </div>
+                <div class="courses-section">
+                    <h3>Additional Courses</h3>
+                    <div class="course-list">
+                        <div class="course-item">
+                            <h4>CS50: Introduction to Computer Science</h4>
+                            <p class="course-provider">Harvard University</p>
+                        </div>
+                        <div class="course-item">
+                            <h4>Web Development</h4>
+                            <p class="course-provider">freeCodeCamp</p>
+                        </div>
+                        <div class="course-item">
+                            <h4>Advanced JavaScript Concepts</h4>
+                            <p class="course-provider">Udemy</p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
-        <div class="cv-button"><a href="#"></a><button>Here is my CV</button></a></div>
+        <div class="cv-button">
+            <a href="./01 single-page CV/index.html"><button>Download My CV</button></a>
+        </div>
     </main>
     <footer>
         <p>© 2025 Egor Savenko</p>
     </footer>
+    <script>
+        // Theme switching functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const html = document.documentElement;
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateIcons(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcons(newTheme);
+        });
+
+        function updateIcons(theme) {
+            if (theme === 'light') {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            } else {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 
 </html>
