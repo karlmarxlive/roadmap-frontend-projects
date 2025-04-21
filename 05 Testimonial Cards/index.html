@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Testimonial Cards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph Meta Tags-->
+    <meta property="og:title" content="Testimonial Cards">
+    <meta property="og:description" content="Examples of testimonial cards with different layouts">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Testimonial Cards</h1>
+    <div class="grid">
+        <div class="speech-card">
+            <div class="speech-card__content">
+                <p class="speech-card__review">I have been solving all the project ideas on roadmap.sh and I am surprised how far I have come from where I started.
+
+                    Highly recomended!
+                </p>
+            </div>
+            <div class="speech-card__triangle"></div>
+            <div class="user-info">
+                <img 
+                    class="user-info__img"
+                    src="./src/AnayaDunlap.jpg"
+                    alt="profile picture of Anaya Dunlap"
+                >
+                <div class="user-info__wrapper">
+                    <p class="user-info__name">Anaya Dunlap</p>
+                    <p class="user-info__position">Junior Frontend Developer</p>
+                </div>
+            </div>
+        </div>
+        <div class="border-card">
+            <div class="border-card__content">
+                <p class="border-card__review">
+                    Since starting my career in 2021, I have only followed one resource, roadmap.sh, it truly helped me go from 0 to having a job and changing the financial trajectory of my family.
+                </p>
+            </div>
+            <div class="border-card__user-info user-info">
+                <img
+                    class="user-info__img"
+                    src="./src/BeatrixBradshaw.jpg"
+                    alt="profile picture of Beatrix Bradshaw"
+                >
+                <div class=" user-info__wrapper">
+                    <p class="user-info__name">Beatrix Bradshaw</p>
+                    <p class="user-info__position">Junior Frontend Developer</p>
+                </div>
+            </div>
+        </div>
+        <div class="rating-card">
+            <img
+                class="rating-card__img"
+                src="./src/ChelseyMora.jpg"
+                alt="profile picture of Chelsey Mora"
+            >
+            <div class="rating-card__content">
+                <div class="rating-card__stars">⭐⭐⭐⭐⭐</div>
+                <p class="rating-card__name">Chelsey Mora</p>
+                <p class="rating-card__position">Engineering Manager</p>
+                <p class="rating-card__review">I find myself recommending roadmap.sh to all the interneers or junior developers. It's a great way to skill up and grow in your career.</p>
+            </div>
+        </div>
+        <div class="carousel-card">
+            <p class="carousel-card__review">roadmap.sh is an incredible resource. I was fortunate to discover it during my university days in 2018. Back then, it was just a single repository with three images. It's amazing to see how much impact it has had on a millions of lives since then.</p>
+            <div class="carousel-card__selector">
+                <button class="carousel-card__btn"><</button>
+                <img
+                    class="carousel-card__img carousel-card__img--inactive"
+                    src="./src/EthanCalderon.jpg"
+                    alt="profile picture of Ethan Calderon"
+                >
+                <img 
+                    class="carousel-card__img"
+                    src="./src/HughAdams.jpg"
+                    alt="profile picture of Hugh Adams"
+                >
+                <img
+                    class="carousel-card__img carousel-card__img--inactive"
+                    src="./src/ReganGlover.jpg"
+                    alt="profile picture of Regan Glover"
+                >
+                <button class="carousel-card__btn">></button>
+            </div>
+            <p class="carousel-card__name">Hugh Adams</p>
+        </div>
+    </div>
+</body>
+</html>

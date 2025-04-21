@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+    --color-dark: #232323;
+    --color-light: #fafafa;
+
+    --message-font: "Inter", sans-serif;
+    --sign-font: "Nunito Sans", sans-serif;
+
+    --border-radius-standart: 25px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Uniform Card Components */
+.user-info {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.user-info__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info__img {
+    border-radius: 50%;
+    width: 10rem;
+}
+
+.user-info__name {
+    font-family: var(--sign-font);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.user-info__position {
+    font-family: var(--sign-font);
+    margin-top: -2rem;
+    font-size: 1.4rem;
+}
+
+/* Speech Card Components */
+.speech-card__content {
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-standart);
+    padding: 0.1rem 1.4rem;
+    margin-bottom: 0;
+}
+
+.speech-card__review {
+    white-space: pre-line;
+    color: var(--color-light);
+    font-family: var(--message-font);
+    font-size: 1.6rem;
+}
+
+.speech-card__triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid var(--color-dark);
+    position: relative;
+    margin: 0;
+    left: calc(5rem - 15px);
+}
+
+/* Border Card Components */
+.border-card {
+    border: 2px solid var(--color-dark);
+    border-radius: var(--border-radius-standart);
+    padding: 0 1.6rem;
+    background-color: var(--color-light);
+}
+
+.border-card__review {
+    color: var(--color-dark);
+    font-family: var(--message-font);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+/* Rating Card Components */
+.rating-card {
+    grid-column: span 2;
+    display: flex;
+    gap: 1rem;
+}
+
+.rating-card__img {
+    width: clamp(50px, 20rem, 100%);
+    height: auto;
+    max-width: 100%;
+    border-radius: var(--border-radius-standart);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.rating-card__content {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-standart);
+    padding: 0 2.4rem;
+}
+
+.rating-card__stars {
+    font-size: 2.2rem;
+    letter-spacing: -0.7rem;
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+.rating-card__name {
+    font-family: var(--sign-font);
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+.rating-card__position {
+    font-family: var(--sign-font);
+    font-size: 1.6rem;
+    margin-top: -2rem;
+    opacity: 0.65;
+}
+
+.rating-card__review {
+    font-family: var(--message-font);
+    font-size: 1.6rem;
+    margin-top: -1rem;
+}
+
+/* Carousel Card Components */
+.carousel-card {
+    grid-column: span 2;
+    background-color: var(--color-light);
+    border: 2px solid var(--color-dark);
+    border-radius: var(--border-radius-standart);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-card__review {
+    font-family: var(--message-font);
+    font-size: 1.6rem;
+    text-align: center;
+    width: 75%;
+    font-weight: 600;
+}
+
+.carousel-card__selector {
+    display: flex;
+    gap: 1rem;
+}
+
+.carousel-card__btn {
+    background-color: var(--color-light);
+    border: none;
+    font-size: 2.2rem;
+    height: 2.4rem;
+    align-self: center;
+}
+
+.carousel-card__btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.carousel-card__img {
+    width: 7rem;
+    border-radius: 50%;
+}
+
+.carousel-card__img--inactive {
+    transform: scale(0.8);
+    opacity: 0.65;
+}
+
+.carousel-card__name {
+    font-family: var(--sign-font);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.carousel-card__btn:focus-visible {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .border-card__user-info {
+        margin-bottom: 1rem;
+    }
+}
