@@ -5,9 +5,9 @@
     --text-color: #030303;
     --date-color: grey;
 
-    --text-font: "Roboto", sans-serif;
-    --header-font: "Raleway", sans-serif;
-    --base-font-size: 1rem;
+    --text-font: "Raleway", sans-serif;
+    --header-font: "Roboto", sans-serif;
+    --base-font-size: 1.6rem;
     --line-height: 1.6;
 }
 
@@ -19,7 +19,7 @@
 }
 
 html {
-    font-size: 62,5%;
+    font-size: 62.5%;
 }
 
 body {
@@ -32,29 +32,31 @@ body {
 h1 {
     text-align: center;
     font-family: var(--header-font);
-    font-size: 2.4rem;
-    margin-top: 4rem;
+    font-size: 3.6rem;
+    margin-top: 3.6rem;
     margin-bottom: 1rem;
 }
 
 .subheader {
     text-align: center;
     font-family: var(--header-font);
-    opacity: 0.5;
-    font-size: 1.4rem;
-    margin-bottom: 3rem;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 2.4rem;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 2fr 1fr 3fr;
-    width: 80%;
+    width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .date p {
-    opacity: 0.6;
+    font-weight: 400;
     text-align: right;
 }
 
@@ -76,4 +78,39 @@ h1 {
 
 .message p {
     text-align: left;
+    font-weight: 600;
+}
+
+.hidden {
+    visibility: hidden; 
+}
+
+.flex-button {
+    margin-top: 2rem;;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.flex-button button {
+    width: 125px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-family: var(--text-font);
+}
+
+.flex-button button:active {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.flex-button button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.flex-button button:focus {
+    outline: 1px solid blue;
 }
