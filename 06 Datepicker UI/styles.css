@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap');
+:root {
+    --color-background: white;
+    --color-elements: black;
+    --color-holiday: red;
+
+    --font-standart: "Yuji Boku", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-standart);
+    width: 300px;
+}
+
+.form {
+    display: flex;
+}
+
+.form__btn {
+    padding: 0;
+    border: none;
+    background-color: var(--color-background);
+    margin: 0;
+}
+
+.form__btn:hover {
+    cursor: pointer;
+}
+
+.form__icon {
+    height: 2rem;
+    padding: 0;
+    padding-top: 0.2rem;
+    margin: 0;
+    background-color: var(--color-background);
+}
+
+.month-panel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.month-panel__btn {
+    background-color: var(--color-background);
+    height: 2.5rem;
+    border: none;
+}
+
+.month-panel__btn:hover {
+    cursor: pointer;
+}
+
+.month-panel__arrow--left {
+    width: 0; 
+    height: 0; 
+    border-top: 0.8rem solid transparent;
+    border-bottom: 0.8rem solid transparent; 
+    border-right: 0.8rem solid var(--color-elements); 
+}
+
+.month-panel__arrow:hover {
+    transform: scale(1.1);
+}
+
+.month-panel__arrow--right {
+    width: 0; 
+    height: 0; 
+    border-top: 0.8rem solid transparent;
+    border-bottom: 0.8rem solid transparent;
+    border-left: 0.8rem solid var(--color-elements);
+}
+
+.month-panel__selected-month {
+    font-size: 1.8rem;
+    position: relative;
+    top: -2rem;
+}
+
+.calendar__weekdays {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-elements);
+    position: relative;
+    top: -3rem;
+}
+
+.calendar__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: right;
+    gap: 0.6rem;
+    font-size: 1.6rem;
+    position: relative;
+    top: -3rem;
+}
+
+.calendar__days span {
+    background-color: white;
+}
+
+span.calendar__weekend {
+    color: var(--color-holiday);
+}
+
+span.calendar__another-month {
+    opacity: 0.5;
+}
+

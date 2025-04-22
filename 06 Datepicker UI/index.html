@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Datepicker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Datepicker">
+    <meta property="og:description" content="Non-functional datepicker UI">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Datepicker</h1>
+    <div class="container">
+        <div class="form">
+            <input
+                class="form__input"
+                type="text"
+                placeholder="dd / mm / yyyy"
+            >
+            <button class="form__btn">
+                <img
+                    class="form__icon"
+                    src="https://img.icons8.com/?size=100&id=16152&format=png&color=000000"
+                    alt="calendar icon"
+                >
+            </button>
+        </div>
+        <div class="calendar">
+            <div class="month-panel">
+                <button class="month-panel__btn">
+                    <div class="month-panel__arrow month-panel__arrow--left"></div>
+                </button>
+                <p class="month-panel__selected-month">April 2025</p>
+                <button class="month-panel__btn">
+                    <div class="month-panel__arrow month-panel__arrow--right"></div>
+                </button>
+            </div>
+            <div class="calendar__weekdays">
+                <span>M</span>
+                <span>T</span>
+                <span>W</span>
+                <span>T</span>
+                <span>F</span>
+                <span class="calendar__weekend">S</span>
+                <span class="calendar__weekend">S</span>
+            </div>
+            <div class="calendar__days">
+                <span class="calendar__another-month">31</span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span class="calendar__weekend">5</span>
+                <span class="calendar__weekend">6</span>
+                
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+                <span class="calendar__weekend">12</span>
+                <span class="calendar__weekend">13</span>
+
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+                <span class="calendar__weekend">19</span>
+                <span class="calendar__weekend">20</span>
+
+                <span>21</span>
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+                <span>25</span>
+                <span class="calendar__weekend">26</span>
+                <span class="calendar__weekend">27</span>
+
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span class="calendar__another-month">1</span>
+                <span class="calendar__another-month">2</span>
+                <span class="calendar__weekend calendar__another-month">3</span>
+                <span class="calendar__weekend calendar__another-month">4</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
