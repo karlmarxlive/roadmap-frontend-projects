@@ -5,6 +5,10 @@
     --color-holiday: red;
 
     --font-standart: "Yuji Boku", sans-serif;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
 }
 
 html {
@@ -54,8 +58,10 @@ h1 {
 
 .month-panel {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--spacing-xs) 0;
 }
 
 .month-panel__btn {
@@ -90,8 +96,13 @@ h1 {
 
 .month-panel__selected-month {
     font-size: 1.8rem;
-    position: relative;
-    top: -2rem;
+    margin: 0;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
 }
 
 .calendar__weekdays {
@@ -101,18 +112,16 @@ h1 {
     font-size: 1.6rem;
     font-weight: 600;
     border-bottom: 2px solid var(--color-elements);
-    position: relative;
-    top: -3rem;
+    padding-bottom: var(--spacing-xs);
 }
 
 .calendar__days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     justify-items: right;
-    gap: 0.6rem;
+    gap: var(--spacing-xs);
     font-size: 1.6rem;
-    position: relative;
-    top: -3rem;
+    padding-top: var(--spacing-xs);
 }
 
 .calendar__days span {
