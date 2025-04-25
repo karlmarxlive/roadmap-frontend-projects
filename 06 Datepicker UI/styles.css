@@ -2,6 +2,7 @@
 :root {
     --color-background: white;
     --color-elements: black;
+    --color-opaque: rgba(0, 0, 0, 0.5);
     --color-holiday: red;
 
     --font-standart: "Yuji Boku", sans-serif;
@@ -111,21 +112,23 @@ h1 {
     justify-content: space-between;
     font-size: 1.6rem;
     font-weight: 600;
-    border-bottom: 2px solid var(--color-elements);
+    border-bottom: 3px solid var(--color-elements);
     padding-bottom: var(--spacing-xs);
 }
 
 .calendar__days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    justify-items: right;
-    gap: var(--spacing-xs);
+    justify-items: center;
+    align-items: center;
+    gap: 1px;
     font-size: 1.6rem;
-    padding-top: var(--spacing-xs);
+    background-color: var(--color-elements);
 }
 
 .calendar__days span {
     background-color: white;
+    width: 100%;
 }
 
 span.calendar__weekend {
@@ -133,6 +136,6 @@ span.calendar__weekend {
 }
 
 span.calendar__another-month {
-    opacity: 0.5;
+    color: var(--color-opaque);
 }
 
