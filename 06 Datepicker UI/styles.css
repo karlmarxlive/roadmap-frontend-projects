@@ -121,14 +121,20 @@ h1 {
     grid-template-columns: repeat(7, 1fr);
     justify-items: center;
     align-items: center;
-    gap: 1px;
     font-size: 1.6rem;
-    background-color: var(--color-elements);
+    outline: 1px solid var(--color-background);
+    outline-offset: -1px;
 }
 
 .calendar__days span {
-    background-color: white;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-elements);
+    aspect-ratio: 1/1;
+    padding: var(--spacing-xs);
+    box-sizing: border-box;
 }
 
 span.calendar__weekend {
