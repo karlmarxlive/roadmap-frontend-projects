@@ -4,7 +4,37 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <tutle>Accessable Form UI</tutle>
+    <title>Accessible Form UI</title>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Accessible Form UI">
+    <meta property="og:description" content="Mockup of an Accessible Form">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
+<body>
+    <h1>The Form</h1>
+    <div class="container">
+        <form class="form">
+            <label id="form__name-label" for="form__name-input">
+                Full Name:
+                <input id="form__name-input"
+                    type="text" 
+                    placeholder="What should we call you?"
+                >
+            </label>
+            <label id="form__email-label" for="form__email-input">
+                Email:
+                <input
+                    id="form__email-input" 
+                    type="email"
+                    placeholder="john@doe.com"
+                >
+            </label>
+            
+        </form>
+    </div>
+</body>
 
 </html>
