@@ -14,27 +14,78 @@
 </head>
 
 <body>
-    <h1>The Form</h1>
-    <div class="container">
-        <form class="form">
-            <label id="form__name-label" for="form__name-input">
-                Full Name:
-                <input id="form__name-input"
-                    type="text" 
-                    placeholder="What should we call you?"
-                >
-            </label>
-            <label id="form__email-label" for="form__email-input">
-                Email:
-                <input
-                    id="form__email-input" 
-                    type="email"
-                    placeholder="john@doe.com"
-                >
-            </label>
+    <main class="page">
+        <h1 class="page__title">The Form</h1>
+        <div class="container">
+            <form class="form">
+                <div class="form__field">
+                    <label id="form__name-label" for="form__name-input" class="form__label">
+                        Full Name
+                        <input id="form__name-input" class="form__input"
+                            type="text" 
+                            placeholder="What should we call you?"
+                            required
+                        >
+                    </label>
+                </div>
+                
+                <div class="form__field">
+                    <label id="form__email-label" for="form__email-input" class="form__label">
+                        Email
+                        <input id="form__email-input" class="form__input"
+                            type="email"
+                            placeholder="example@mail.com"
+                            required
+                        >
+                    </label>
+                </div>
+                
+                <div class="form__field">
+                    <label id="form__password-label" for="form__password-input" class="form__label">
+                        Enter Password
+                        <input id="form__password-input" class="form__input"
+                            type="password"
+                            placeholder="xxxxxxxx"
+                            minlength="8"
+                            required
+                        >
+                    </label>
+                </div>
+                
+                <div class="form__field">
+                    <label id="form__confirm-label" for="form__confirm-input" class="form__label">
+                        Confirm Password
+                        <input id="form__confirm-input" class="form__input"
+                            type="password"
+                            placeholder="xxxxxxxx"
+                            minlength="8"
+                            required
+                        >
+                    </label>
+                </div>
+                
+                <div class="form__field">
+                    <button type="submit" class="form__button">Update Profile</button>
+                </div>
+            </form>
             
-        </form>
-    </div>
+            <div class="progress">
+                <div class="progress__percentage">
+                    <progress class="progress__percentage-bar" value="65" max="100"></progress>
+                </div>
+                <p class="progress__title">Profile Completeness</p>
+                <div class="progress__checklist-container">
+                    <ul class="progress__checklist">
+                        <li class="progress__checklist-item progress__checklist-item--checked">Create Account</li>
+                        <li class="progress__checklist-item progress__checklist-item--checked">Update Roadmap Progress</li>
+                        <li class="progress__checklist-item progress__checklist-item--checked">Setup Public Profile</li>
+                        <li class="progress__checklist-item">Complete your first project</li>
+                        <li class="progress__checklist-item">Invite your Friends</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
