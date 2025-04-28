@@ -1,0 +1,34 @@
+:root {
+    --color-background: white;
+    --color-text: black;
+    --color-error: red;
+    --color-accent: blue;
+
+    --font-standard: Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-standard);
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.page__title {
+    font-size: 3.2rem;
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+}
+
+.form__input {
+    display: block;
+}
