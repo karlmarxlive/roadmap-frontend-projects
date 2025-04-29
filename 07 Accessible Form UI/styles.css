@@ -1,10 +1,16 @@
 :root {
-    --color-background: white;
-    --color-text: black;
+    --color-background: #FBFBFB;
+    --color-text: #030303;
     --color-error: red;
     --color-accent: blue;
+    --color-background-checklist: #e0e0e0;
+    --color-valid: green;
 
     --font-standard: Helvetica, sans-serif;
+
+    --spacing-s: 0.5rem;
+    --spacing-m: 1rem;
+    --spacing-l: 1.5rem;
 }
 
 html {
@@ -27,8 +33,185 @@ html {
 .container {
     display: flex;
     gap: 2rem;
+    border: 2px solid var(--color-text);
+    padding: var(--spacing-l);
+    border-radius: 25px;
+    font-size: 1.6rem;
+    background-color: var(--color-background);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__subtitle {
+    font-size: 2.2rem;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+    padding: 0;
+}
+
+.form__description {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: var(--spacing-s);
+}
+
+.form__label--required::after {
+    content: "*";
+    color: var(--color-error);
 }
 
 .form__input {
-    display: block;
+    height: 1.8rem;
+    width: 100%;
+}
+
+.form__input:focus-within {
+    outline: none;
+}
+
+.form__input:user-invalid {
+    outline: 2px solid var(--color-error);
+}
+
+.form__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.form__input-wrapper:focus-within {
+    outline: 2px solid var(--color-accent);
+}
+
+.form__input-wrapper--valid::after {
+    content: "✓";
+    color: var(--color-valid);
+    position: absolute;
+    right: -1.5rem;
+    top: 1rem;
+    transform: translateY(-50%);
+}
+
+.form__password-visibility-btn {
+    height: 1.8rem;
+    width: 1.8rem;
+    padding: 0;
+    background-color: none;
+    border: none;
+    position: absolute;
+    right: var(--spacing-s);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form__password-visibility-btn:focus {
+    outline: 2px solid var(--color-accent);
+}
+
+.form__password-visibility-btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+.form__password-visibility-img {
+    height: 100%;
+    scale: 1 / 1;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.form__error-message {
+    font-size: 1.2rem;
+    color: var(--color-error);
+    padding: 0;
+    margin: var(--spacing-s);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.form__error-message--visible {
+    opacity: 1;
+}
+
+.form__button {
+    margin-top: var(--spacing-m);
+    border: none;
+    background-color: var(--color-text);
+    color: var(--color-background);
+    padding: var(--spacing-m);
+    border-radius: 15px;
+    width: 200px;
+    transition-duration: 0.3s;
+    transition-property: transform, background-color, color;
+}
+
+.form__button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.form__button:active {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.form__button:focus {
+    outline: 2px solid var(--color-accent);
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress__checklist {
+    list-style: none;
+    background-color: var(--color-background-checklist);
+    border-radius: 20px;
+    height: 100%;
+    padding-left: var(--spacing-l);
+}
+
+.progress__checklist-item {
+    padding: var(--spacing-s);
+}
+
+.progress__checklist-item--checked {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.progress__checklist-item::before {
+    content: "  ";
+}
+
+.progress__checklist-item::after {
+    content: "  ";
+}
+
+@media screen and (max-width: 500px) {
+    .page {
+        margin-top: 10%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .form__input {
+        padding-right: 7.2rem;
+    }
 }
