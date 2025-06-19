@@ -14,9 +14,18 @@
     <main class="page">
         <nav class="page__nav">
             <ul class="navbar">
-                <li class="navbar__home">Home</li>
-                <li class="navbar__projects">Projects</li>
-                <li class="navbar__blog">Blog</li>
+                <li class="navbar__item" aria-labelledby="tooltip-home">
+                    Home
+                    <span class="tooltip tooltip-home" role="tooltip" id="tooltip-home">My Homepage</span>
+                </li>
+                <li class="navbar__item" aria-labelledby="tooltip-projects">
+                    Projects
+                    <span class="tooltip tooltip-projects" role="tooltip" id="tooltip-projects">Everything that I've build</span>
+                </li>
+                <li class="navbar__item" aria-labelledby="tooltip-blog">
+                    Blog
+                    <span class="tooltip tooltip-blog" role="tooltip" id="tooltip-blog">Some of my articles</span>
+                </li>
             </ul>
         </nav>
     </main>
