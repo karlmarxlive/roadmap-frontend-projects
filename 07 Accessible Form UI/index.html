@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessible Form UI</title>
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Accessible Form UI" />
-    <meta property="og:description" content="Mockup of an Accessible Form" />
-    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Accessible Form UI">
+    <meta property="og:description" content="Mockup of an Accessible Form">
+    <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css">
   </head>
 
   <body>
@@ -23,8 +23,9 @@
               id="name-label"
               for="name-input"
               class="form__label form__label--required"
-              >Full Name</label
             >
+              Full Name
+            </label>
             <div class="form__input-wrapper form__input-wrapper--valid">
               <input
                 id="name-input"
@@ -38,7 +39,7 @@
                 name="full-name"
                 minlength="2"
                 aria-invalid="false"
-              />
+              >
             </div>
             <p
               id="name-error"
@@ -69,7 +70,7 @@
                 autocomplete="email"
                 name="email"
                 aria-invalid="false"
-              />
+              >
             </div>
             <p
               id="email-error"
@@ -101,7 +102,7 @@
                 aria-describedby="password-error"
                 name="password"
                 aria-invalid="false"
-              />
+              >
               <button
                 type="button"
                 class="form__password-visibility-btn"
@@ -113,7 +114,7 @@
                   class="form__password-visibility-img"
                   src="https://img.icons8.com/?size=100&id=42321&format=png&color=000000"
                   alt="eye icon"
-                />
+                >
               </button>
             </div>
             <p
@@ -143,7 +144,7 @@
                 aria-required="true"
                 aria-describedby="confirm-error"
                 aria-invalid="false"
-              />
+              >
               <button
                 type="button"
                 class="form__password-visibility-btn"
@@ -155,7 +156,7 @@
                   class="form__password-visibility-img"
                   src="https://img.icons8.com/?size=100&id=42321&format=png&color=000000"
                   alt="eye icon"
-                />
+                >
               </button>
             </div>
             <p
@@ -180,12 +181,10 @@
           <div class="progress__percentage">
             <progress
               class="progress__percentage-bar"
-              min="0"
               value="65"
               max="100"
               aria-valuemin="0"
               aria-valuenow="65"
-              aria-valuemax="100"
               aria-valuetext="65 percent complete"
               aria-label="Profile completion progress"
             ></progress>
@@ -210,7 +209,9 @@
               <li class="progress__checklist-item">
                 Complete your first project
               </li>
-              <li class="progress__checklist-item">Invite your Friends</li>
+              <li class="progress__checklist-item">
+                Invite your Friends
+              </li>
             </ul>
           </div>
         </div>
