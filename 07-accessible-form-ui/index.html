@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessible Form UI</title>
@@ -11,164 +10,237 @@
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="./styles.css">
-</head>
+  </head>
 
-<body>
+  <body>
     <main class="page">
-        <h1 class="page__title">The Form</h1>
-        <div class="container">
-            <form class="form" action="#" method="POST">
-                <h2 class="page__subtitle">Profile Information</h2>
-                <fieldset class="form__field">
-                    <label id="name-label" for="name-input" class="form__label form__label--required">Full Name</label>
-                    <div class="form__input-wrapper form__input-wrapper--valid">
-                        <input id="name-input" class="form__input"
-                            type="text" 
-                            placeholder="What should we call you?"
-                            required
-                            aria-required="true"
-                            aria-describedby="name-error"
-                            autocomplete="name"
-                            name="full-name"
-                            minlength="2"
-                            aria-invalid="false"
-                        >
-                    </div>
-                    <p id="name-error" class="form__error-message form__error-message--visible" aria-live="polite" role="alert">
-                        Invalid characters
-                    </p>
-                </fieldset>
-                
-                <fieldset class="form__field">
-                    <label id="email-label" for="email-input" class="form__label form__label--required">Email</label>
-                    <div class="form__input-wrapper">
-                        <input id="email-input" class="form__input"
-                            type="email"
-                            placeholder="example@mail.com"
-                            required
-                            aria-required="true"
-                            aria-describedby="email-error"
-                            autocomplete="email"
-                            name="email"
-                            aria-invalid="false"
-                        >
-                    </div>
-                    <p id="email-error" class="form__error-message form__error-message--visible" aria-live="polite" role="alert">
-                        Please enter a valid email address
-                    </p>
-                </fieldset>
-                
-                <fieldset class="form__field">
-                    <label id="password-label" for="password-input" class="form__label form__label--required">Enter Password</label>
-                    <p class="form__description">Use at least 8 characters</p>
-                    <div class="form__input-wrapper">
-                        <input id="password-input" class="form__input"
-                            type="password"
-                            placeholder="xxxxxxxx"
-                            minlength="8"
-                            required
-                            aria-required="true"
-                            aria-describedby="password-error"
-                            name="password"
-                            aria-invalid="false"
-                        >
-                        <button 
-                            type="button"
-                            class="form__password-visibility-btn"
-                            aria-label="Show password"
-                            aria-pressed="false"
-                            onclick="togglePasswordVisibility('password-input', this)"
-                        >
-                            <img class="form__password-visibility-img" src="https://img.icons8.com/?size=100&id=42321&format=png&color=000000" alt="eye icon">
-                        </button>
-                   </div>
-                    <p id="password-error" class="form__error-message form__error-message--visible" aria-live="polite" role="alert">
-                        Must use at least 8 characters
-                    </p>
-                </fieldset>
-                
-                <fieldset class="form__field">
-                    <label id="confirm-label" for="confirm-input" class="form__label form__label--required">Confirm Password</label>
-                    <div class="form__input-wrapper">
-                        <input id="confirm-input" class="form__input"
-                            type="password"
-                            placeholder="xxxxxxxx"
-                            required
-                            aria-required="true"
-                            aria-describedby="confirm-error"
-                            aria-invalid="false"
-                        >
-                        <button 
-                            type="button"
-                            class="form__password-visibility-btn"
-                            aria-label="Show password"
-                            aria-pressed="false"
-                            onclick="togglePasswordVisibility('confirm-input', this)"
-                        >
-                            <img class="form__password-visibility-img" src="https://img.icons8.com/?size=100&id=42321&format=png&color=000000" alt="eye icon">
-                        </button>
-                    </div>
-                    <p id="confirm-error" class="form__error-message form__error-message--visible" aria-live="polite" role="alert">
-                        Passwords don't match
-                    </p>
-                </fieldset>
-                
-                <div class="form__field">
-                    <button type="submit" class="form__button">Update Profile</button>
-                </div>
-            </form>
-            
-            <div class="progress" role="region" aria-labelledby="progress-title">
-                <h2 id="progress-title" class="page__subtitle">Profile Completeness</h2>
-                <div class="progress__percentage">
-                    <progress
-                        class="progress__percentage-bar"
-                        min="0"
-                        value="65"
-                        max="100"
-                        aria-valuemin="0"
-                        aria-valuenow="65"
-                        aria-valuemax="100"
-                        aria-valuetext="65 percent complete"
-                        aria-label="Profile completion progress"
-                    ></progress>
-                </div>
-                <div class="progress__checklist-container">
-                    <ul class="progress__checklist">
-                        <li class="progress__checklist-item progress__checklist-item--checked">Create Account</li>
-                        <li class="progress__checklist-item progress__checklist-item--checked">Update Roadmap Progress</li>
-                        <li class="progress__checklist-item progress__checklist-item--checked">Setup Public Profile</li>
-                        <li class="progress__checklist-item">Complete your first project</li>
-                        <li class="progress__checklist-item">Invite your Friends</li>
-                    </ul>
-                </div>
+      <h1 class="page__title">The Form</h1>
+      <div class="container">
+        <form class="form" action="#" method="POST">
+          <h2 class="page__subtitle">Profile Information</h2>
+          <fieldset class="form__field">
+            <label
+              id="name-label"
+              for="name-input"
+              class="form__label form__label--required"
+            >
+              Full Name
+            </label>
+            <div class="form__input-wrapper form__input-wrapper--valid">
+              <input
+                id="name-input"
+                class="form__input"
+                type="text"
+                placeholder="What should we call you?"
+                required
+                aria-required="true"
+                aria-describedby="name-error"
+                autocomplete="name"
+                name="full-name"
+                minlength="2"
+                aria-invalid="false"
+              >
             </div>
+            <p
+              id="name-error"
+              class="form__error-message form__error-message--visible"
+              aria-live="polite"
+              role="alert"
+            >
+              Invalid characters
+            </p>
+          </fieldset>
+
+          <fieldset class="form__field">
+            <label
+              id="email-label"
+              for="email-input"
+              class="form__label form__label--required"
+              >Email</label
+            >
+            <div class="form__input-wrapper">
+              <input
+                id="email-input"
+                class="form__input"
+                type="email"
+                placeholder="example@mail.com"
+                required
+                aria-required="true"
+                aria-describedby="email-error"
+                autocomplete="email"
+                name="email"
+                aria-invalid="false"
+              >
+            </div>
+            <p
+              id="email-error"
+              class="form__error-message form__error-message--visible"
+              aria-live="polite"
+              role="alert"
+            >
+              Please enter a valid email address
+            </p>
+          </fieldset>
+
+          <fieldset class="form__field">
+            <label
+              id="password-label"
+              for="password-input"
+              class="form__label form__label--required"
+              >Enter Password</label
+            >
+            <p class="form__description">Use at least 8 characters</p>
+            <div class="form__input-wrapper">
+              <input
+                id="password-input"
+                class="form__input"
+                type="password"
+                placeholder="xxxxxxxx"
+                minlength="8"
+                required
+                aria-required="true"
+                aria-describedby="password-error"
+                name="password"
+                aria-invalid="false"
+              >
+              <button
+                type="button"
+                class="form__password-visibility-btn"
+                aria-label="Show password"
+                aria-pressed="false"
+                onclick="togglePasswordVisibility('password-input', this)"
+              >
+                <img
+                  class="form__password-visibility-img"
+                  src="https://img.icons8.com/?size=100&id=42321&format=png&color=000000"
+                  alt="eye icon"
+                >
+              </button>
+            </div>
+            <p
+              id="password-error"
+              class="form__error-message form__error-message--visible"
+              aria-live="polite"
+              role="alert"
+            >
+              Must use at least 8 characters
+            </p>
+          </fieldset>
+
+          <fieldset class="form__field">
+            <label
+              id="confirm-label"
+              for="confirm-input"
+              class="form__label form__label--required"
+              >Confirm Password</label
+            >
+            <div class="form__input-wrapper">
+              <input
+                id="confirm-input"
+                class="form__input"
+                type="password"
+                placeholder="xxxxxxxx"
+                required
+                aria-required="true"
+                aria-describedby="confirm-error"
+                aria-invalid="false"
+              >
+              <button
+                type="button"
+                class="form__password-visibility-btn"
+                aria-label="Show password"
+                aria-pressed="false"
+                onclick="togglePasswordVisibility('confirm-input', this)"
+              >
+                <img
+                  class="form__password-visibility-img"
+                  src="https://img.icons8.com/?size=100&id=42321&format=png&color=000000"
+                  alt="eye icon"
+                >
+              </button>
+            </div>
+            <p
+              id="confirm-error"
+              class="form__error-message form__error-message--visible"
+              aria-live="polite"
+              role="alert"
+            >
+              Passwords don't match
+            </p>
+          </fieldset>
+
+          <div class="form__field">
+            <button type="submit" class="form__button">Update Profile</button>
+          </div>
+        </form>
+
+        <div class="progress" role="region" aria-labelledby="progress-title">
+          <h2 id="progress-title" class="page__subtitle">
+            Profile Completeness
+          </h2>
+          <div class="progress__percentage">
+            <progress
+              class="progress__percentage-bar"
+              value="65"
+              max="100"
+              aria-valuemin="0"
+              aria-valuenow="65"
+              aria-valuetext="65 percent complete"
+              aria-label="Profile completion progress"
+            ></progress>
+          </div>
+          <div class="progress__checklist-container">
+            <ul class="progress__checklist">
+              <li
+                class="progress__checklist-item progress__checklist-item--checked"
+              >
+                Create Account
+              </li>
+              <li
+                class="progress__checklist-item progress__checklist-item--checked"
+              >
+                Update Roadmap Progress
+              </li>
+              <li
+                class="progress__checklist-item progress__checklist-item--checked"
+              >
+                Setup Public Profile
+              </li>
+              <li class="progress__checklist-item">
+                Complete your first project
+              </li>
+              <li class="progress__checklist-item">
+                Invite your Friends
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </main>
 
     <script>
-        function togglePasswordVisibility(id, button) {
-            try {
-                const input = document.getElementById(id);
-                if (!input) return;
-                const isPasswordVisible = input.type === "text";
-                input.type = isPasswordVisible ? "password" : "text";
-                img = button.firstElementChild;
-                button.setAttribute("aria-pressed", !isPasswordVisible);
-                button.setAttribute(
-                    "aria-label",
-                    isPasswordVisible ? "Show password" : "Hide password"
-                )
-                img.setAttribute(
-                    "src",
-                    isPasswordVisible ? "https://img.icons8.com/?size=100&id=42321&format=png&color=000000" : "https://img.icons8.com/?size=100&id=43372&format=png&color=000000"
-                )
-            }
-            catch (error) {
-                console.error("Error toggling password visibility:", error);
-            }
+      function togglePasswordVisibility(id, button) {
+        try {
+          const input = document.getElementById(id);
+          if (!input) return;
+          const isPasswordVisible = input.type === "text";
+          input.type = isPasswordVisible ? "password" : "text";
+          img = button.firstElementChild;
+          button.setAttribute("aria-pressed", !isPasswordVisible);
+          button.setAttribute(
+            "aria-label",
+            isPasswordVisible ? "Show password" : "Hide password"
+          );
+          img.setAttribute(
+            "src",
+            isPasswordVisible
+              ? "https://img.icons8.com/?size=100&id=42321&format=png&color=000000"
+              : "https://img.icons8.com/?size=100&id=43372&format=png&color=000000"
+          );
+        } catch (error) {
+          console.error("Error toggling password visibility:", error);
         }
+      }
     </script>
-</body>
-
+  </body>
 </html>
