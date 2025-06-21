@@ -1,0 +1,281 @@
+:root {
+    --text-color: #000;
+    --outline-color: #090909;
+}
+
+.main-nav {
+    width: 100%;
+    padding-top: 15%;
+}
+
+.main-nav__list {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.main-nav__btn {
+    width: 90px;
+    background-color: white;
+    border: none;
+}
+
+.main-nav__btn:hover {
+    cursor: pointer;
+}
+
+.tab {
+    padding: 1.5rem;
+    border-radius: 0 8px 8px 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background: #fff;
+    min-height: 300px;
+}
+
+/* COSMIC BLOCK */
+.cosmic {
+  background: #f8fbff;
+  border: 1px solid #e1e8f0;
+}
+
+.cosmic__title {
+  color: #2c3e50;
+  margin-top: 0;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.cosmic__solar-system {
+  margin: 1.5rem 0;
+}
+
+.cosmic__sun {
+  fill: #f39c12;
+  stroke: #e67e22;
+  stroke-width: 2;
+}
+
+.cosmic__planet {
+  stroke: #34495e;
+  stroke-width: 1;
+}
+
+.cosmic__planet--mercury { fill: #95a5a6; }
+.cosmic__planet--venus { fill: #e74c3c; }
+.cosmic__planet--earth { fill: #3498db; }
+
+.cosmic__controls {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.cosmic__button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-grow: 1;
+}
+
+.cosmic__button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.cosmic__info {
+  background: #edf7ff;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+.cosmic__instruction {
+  margin: 0 0 0.5rem;
+  color: #7f8c8d;
+}
+
+.cosmic__distance {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e74c3c;
+  min-height: 2.5rem;
+}
+
+/* RECIPE BLOCK */
+.recipe {
+  background: #fdf7ff;
+  border: 1px solid #e8d7f1;
+}
+
+.recipe__title {
+  color: #8e44ad;
+  margin-top: 0;
+  border-bottom: 2px solid #9b59b6;
+  padding-bottom: 0.5rem;
+}
+
+.recipe__form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.recipe__fieldset {
+  border: 1px solid #e0cde9;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 0;
+}
+
+.recipe__legend {
+  font-weight: bold;
+  color: #9b59b6;
+  padding: 0 0.5rem;
+}
+
+.recipe__label {
+  display: block;
+  margin: 0.75rem 0;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.recipe__label:hover {
+  background: #f5eef9;
+}
+
+.recipe__radio, 
+.recipe__checkbox {
+  margin-right: 0.75rem;
+}
+
+.recipe__progress {
+  margin-top: 1rem;
+}
+
+.recipe__progress-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #8e44ad;
+}
+
+.recipe__progress-bar {
+  width: 100%;
+  height: 1.75rem;
+  margin: 0.5rem 0;
+}
+
+.recipe__action {
+  background: #9b59b6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.recipe__action:hover {
+  background: #8e44ad;
+}
+
+/* PIXEL-ART BLOCK */
+.pixel-art {
+  background: #fff8f7;
+  border: 1px solid #f5d5d0;
+}
+
+.pixel-art__title {
+  color: #c0392b;
+  margin-top: 0;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 0.5rem;
+}
+
+.pixel-art__tools {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  align-items: center;
+}
+
+.pixel-art__color-picker {
+  width: 3rem;
+  height: 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pixel-art__action {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pixel-art__action:hover {
+  background: #c0392b;
+}
+
+.pixel-art__grid {
+  display: inline-grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1px;
+  border: 2px solid #e0e0e0;
+  background: #e0e0e0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.pixel-art__row {
+  display: contents;
+}
+
+.pixel-art__cell {
+  aspect-ratio: 1/1;
+  background: #ffffff;
+  min-width: 25px;
+  min-height: 25px;
+  cursor: pointer;
+  transition: background 0.1s, transform 0.1s;
+}
+
+.pixel-art__cell:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.pixel-art__preview {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pixel-art__preview-title {
+  margin: 0 0 0.5rem;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.pixel-art__preview-box {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 2px dashed #bdc3c7;
+  background-color: #f8f9fa;
+}
