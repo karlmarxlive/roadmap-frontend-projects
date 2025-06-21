@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive tabs</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item"><button id="tab-1-btn" class="main-nav__btn main-nav__btn--selected">First Tab</button></li>
+                <li class="main-nav__item"><button id="tab-2-btn" class="main-nav__btn">Second Tab</button></li>
+                <li class="main-nav__item"><button id="tab-3-btn" class="main-nav__btn">Third Tab</button></li>
+                <li class="main-nav__item"><button id="tab-4-btn" class="main-nav__btn">Fourth Tab</button></li>
+            </ul>
+        </nav>
+
+        <div class="tabs__container">
+            <div id="tab-1" class="tab tab--selected">
+                <p class="tab__p">Clicking each tab should hide the content of the other tab and show the content of the clicked tab. By default, enable the first tab.</p>
+                <img class="tab__img" src="./src/1st-tab-img.png">
+                <p class="tab__p">Add some dummy content or just simple text showing the tab.</p>
+            </div>
+
+            <div id="tab-2" class="tab">
+                <h2>Planet Distance Explorer</h2>
+                <svg width="100%" height="200" viewBox="0 0 500 200">
+                    <circle cx="50" cy="100" r="15" fill="orange" class="sun"></circle>
+                    <circle cx="150" cy="100" r="8" fill="gray" class="planet"></circle>
+                    <circle cx="250" cy="100" r="10" fill="blue" class="planet"></circle>
+                    <circle cx="380" cy="100" r="12" fill="red" class="planet"></circle>
+                </svg>
+                
+                <div class="planet-controls">
+                    <button data-planet="mercury">Mercury</button>
+                    <button data-planet="venus">Venus</button>
+                    <button data-planet="earth">Earth</button>
+                </div>
+                
+                <div class="planet-info">
+                    <p>Select a planet to see its distance from the sun</p>
+                    <div class="distance-display">??? million km</div>
+                </div>
+            </div>
+
+            <div id="tab-3" class="tab">
+                <h2>Custom Cupcake Creator</h2>
+  
+                <div class="recipe-form">
+                    <fieldset>
+                    <legend>Base Flavor:</legend>
+                    <label><input type="radio" name="base" value="chocolate"> Chocolate</label>
+                    <label><input type="radio" name="base" value="vanilla"> Vanilla</label>
+                    </fieldset>
+                    
+                    <fieldset>
+                    <legend>Toppings:</legend>
+                    <label><input type="checkbox" name="topping" value="sprinkles"> Sprinkles</label>
+                    <label><input type="checkbox" name="topping" value="frosting"> Frosting</label>
+                    <label><input type="checkbox" name="topping" value="fruit"> Fresh Fruit</label>
+                    </fieldset>
+                    
+                    <div class="baking-progress">
+                    <label>Baking Completion:</label>
+                    <progress value="0" max="100"></progress>
+                    <button class="start-baking">Start Baking</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-4" class="tab">
+                <h2>Mini Pixel Canvas</h2>
+  
+                <div class="art-tools">
+                    <input type="color" id="paint-color" value="#ff0000">
+                    <button id="clear-canvas">Clear</button>
+                </div>
+                
+                <div class="pixel-grid">
+                    <!-- 8x8 grid of pixels -->
+                    <div class="pixel-row">
+                    <div class="pixel"></div><div class="pixel"></div>
+                    <!-- ... 8 pixels per row ... -->
+                    </div>
+                    <!-- ... 8 rows ... -->
+                </div>
+                
+                <div class="art-preview">
+                    <h3>Your Creation:</h3>
+                    <div class="preview-box"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
