@@ -3,9 +3,14 @@
     --outline-color: #090909;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .main-nav {
     width: 100%;
     padding-top: 15%;
+    margin: 0 auto;
 }
 
 .main-nav__list {
@@ -19,6 +24,12 @@
     width: 90px;
     background-color: white;
     border: none;
+    opacity: 0.5;
+}
+
+.main-nav__btn--selected {
+  border-bottom: 2px solid var(--outline-color);
+  opacity: 1;
 }
 
 .main-nav__btn:hover {
@@ -31,6 +42,16 @@
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     background: #fff;
     min-height: 300px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tab__p {
+  width: 100%;
+}
+
+.tab__img {
+  width: 100%;
 }
 
 /* COSMIC BLOCK */
