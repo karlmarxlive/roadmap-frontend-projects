@@ -25,11 +25,16 @@
     background-color: white;
     border: none;
     opacity: 0.5;
+    padding: 0 1.5rem;
+    border-radius: 8px;
 }
 
 .main-nav__btn--selected {
   border-bottom: 2px solid var(--outline-color);
   opacity: 1;
+  padding: 0 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .main-nav__btn:hover {
@@ -38,12 +43,18 @@
 
 .tab {
     padding: 1.5rem;
-    border-radius: 0 8px 8px 8px;
+    border-radius:8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     background: #fff;
     min-height: 300px;
     width: 80%;
     margin: 0 auto;
+    display: none;
+}
+
+.tab--selected {
+  display: flex;
+  flex-direction: column;
 }
 
 .tab__p {
