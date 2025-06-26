@@ -2,7 +2,7 @@ const tabBtns = document.getElementsByClassName('main-nav__btn');
 const indicator = document.querySelector('.nav-indicator');
 let isSwapping = false;
 
-function changeToTab(tabId) {
+function changeToTab(tabId, btn) {
     if (isSwapping) return;
     isSwapping = true;
 
@@ -26,6 +26,7 @@ function changeToTab(tabId) {
     nextTab.addEventListener('animationend', () => {
         nextTab.classList.remove('tab--enter');
         nextTab.classList.add('tab--selected');
+        changeToBtn(btn);
         isSwapping = false;
     }, {once: true});
 }
@@ -51,8 +52,7 @@ moveIndicator(document.querySelector('.main-nav__btn--selected'));
 for (const btn of tabBtns) {
     btn.addEventListener('click', () => {
         if (!btn.classList.contains('main-nav__btn--selected')) {
-            changeToBtn(btn);
-            changeToTab(getActiveTabId(btn));
+            changeToTab(getActiveTabId(btn), btn);
             moveIndicator(btn);
         }
     })
