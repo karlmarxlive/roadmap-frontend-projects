@@ -1,5 +1,5 @@
 const tabBtns = document.getElementsByClassName('main-nav__btn');
-const indicator = document.querySelector('.nav-indicator');
+const indicator = document.querySelector('.main-nav__indicator');
 let isSwapping = false;
 
 function changeToTab(id, btn) {
