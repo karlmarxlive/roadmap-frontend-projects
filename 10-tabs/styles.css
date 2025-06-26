@@ -33,11 +33,12 @@ html {
 }
 
 .main-nav__btn {
-    width: 90px;
+    inline-size: auto;
+    flex: 0 1 auto;
     background-color: white;
     border: none;
     opacity: 0.5;
-    padding: 0 1.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
     border-bottom: 2px solid var(--background-color);
     transition: opacity var(--animation-delay),
@@ -81,7 +82,8 @@ html {
   bottom: -4px;
   left: 0;
   height: 2px;
-  width: 90px;
+  inline-size: auto;
+  flex: 0 1 auto;
   background: var(--outline-color);
   border-radius: 2px;
   transition: transform var(--animation-delay) ease,
