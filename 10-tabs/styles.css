@@ -39,6 +39,7 @@ html {
     border: none;
     opacity: 0.5;
     padding: 0.5rem 1rem;
+    margin: 0 0.1rem;
     border-radius: 8px;
     border-bottom: 2px solid var(--background-color);
     transition: opacity var(--animation-delay),

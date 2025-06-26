@@ -1,6 +1,44 @@
 const tabBtns = document.getElementsByClassName('main-nav__btn');
 const indicator = document.querySelector('.main-nav__indicator');
+const tabList = document.querySelector('[role="tablist"]');
 let isSwapping = false;
+
+const tabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
+
+tabList.addEventListener('keydown', e => {
+  const currentIndex = tabs.indexOf(document.activeElement);
+  if (currentIndex === -1) return;                
+
+  let targetIndex = currentIndex;
+
+  switch (e.key) {
+    case 'ArrowRight':
+    case 'ArrowDown':
+      targetIndex = (currentIndex + 1) % tabs.length;
+      break;
+    case 'ArrowLeft':
+    case 'ArrowUp':
+      targetIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+      break;
+    case 'Home':
+      targetIndex = 0;
+      break;
+    case 'End':
+      targetIndex = tabs.length - 1;
+      break;
+    case 'Enter':
+    case ' ':
+      e.preventDefault();
+      document.activeElement.click();             
+      return;
+    default:
+      return;                                     
+  }
+
+  e.preventDefault();                           
+  tabs[targetIndex].focus();                      
+});
+
 
 function changeToTab(id, btn) {
     if (isSwapping) return;
