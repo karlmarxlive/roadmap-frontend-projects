@@ -52,6 +52,8 @@ function changeToTab(id, btn) {
         return;
     }
 
+    changeToBtn(nextBtn);
+
     nextTab.style.display = 'flex';
     nextTab.classList.add('tab--enter');
 
@@ -68,7 +70,6 @@ function changeToTab(id, btn) {
         nextTab.classList.add('tab--selected');
         nextTab.removeAttribute('hidden');
 
-        changeToBtn(nextBtn);
         isSwapping = false;
     }, {once: true});
 }
