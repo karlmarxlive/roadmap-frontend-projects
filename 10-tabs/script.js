@@ -54,21 +54,19 @@ function changeToTab(id, btn) {
 
     changeToBtn(nextBtn);
 
-    nextTab.style.display = 'flex';
+    nextTab.removeAttribute('hidden');
     nextTab.classList.add('tab--enter');
 
     currentTab.classList.add('tab--leave');
 
     currentTab.addEventListener('animationend', () => {
         currentTab.classList.remove('tab--leave', 'tab--selected');
-        currentTab.style.display = 'none';
         currentTab.setAttribute('hidden', '');
     }, {once:true});
 
     nextTab.addEventListener('animationend', () => {
         nextTab.classList.remove('tab--enter');
         nextTab.classList.add('tab--selected');
-        nextTab.removeAttribute('hidden');
 
         isSwapping = false;
     }, {once: true});
@@ -87,12 +85,14 @@ function changeToBtn(nextBtn) {
     nextBtn.classList.add('main-nav__btn--selected');
     nextBtn.setAttribute('aria-selected', 'true');
     nextBtn.setAttribute('tabindex', '0');
+
+    moveIndicator(nextBtn);
 }
 
 function moveIndicator(btn){
   const btnRect = btn.getBoundingClientRect();
   const ulRect  = btn.parentElement.parentElement.getBoundingClientRect();
-  indicator.style.width     = `${btnRect.width}px`;
+  indicator.style.width = `${btnRect.width}px`;
   indicator.style.transform = `translateX(${btnRect.left - ulRect.left}px)`;
 }
 moveIndicator(document.querySelector('.main-nav__btn--selected'));
@@ -107,7 +107,6 @@ for (const btn of tabBtns) {
     btn.addEventListener('click', () => {
         if (!btn.classList.contains('main-nav__btn--selected')) {
             changeToTab(getActiveTabId(btn), btn);
-            moveIndicator(btn);
         }
     })
 }
