@@ -58,6 +58,12 @@ function moveIndicator(btn){
 }
 moveIndicator(document.querySelector('.main-nav__btn--selected'));
 
+function updateIndicator() {
+    moveIndicator(document.querySelector('.main-nav__btn--selected'));
+}
+
+window.addEventListener('resize', updateIndicator);
+
 for (const btn of tabBtns) {
     btn.addEventListener('click', () => {
         if (!btn.classList.contains('main-nav__btn--selected')) {
