@@ -12,7 +12,7 @@
     </header>
     <main>
         <nav class="main-nav">
-            <ul class="main-nav__list" role="tablist" aria-label="Sample tabs">
+            <ul class="main-nav__list" role="tablist" aria-label="Sample tabs" aria-orientation="horizontal">
                 <li class="main-nav__item"><button 
                     id="tab-1-btn" 
                     class="main-nav__btn main-nav__btn--selected" 
@@ -57,7 +57,7 @@
             <span class="main-nav__indicator" aria-hidden="true"></span>
         </nav>
 
-        <div class="tabs__container">
+        <div class="tabs__container" aria-live="polite">
             <div id="tab-1" class="tab basic-tab tab--selected" role="tabpanel" tabindex="0" aria-labelledby="tab-1-btn">
                 <p class="tab__p">Clicking each tab should hide the content of the other tab and show the content of the clicked tab. By default, enable the first tab.</p>
                 <img class="tab__img" src="./src/1st-tab-img.png" alt="Sample image">

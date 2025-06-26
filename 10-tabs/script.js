@@ -1,4 +1,4 @@
-const tabBtns = document.getElementsByClassName('main-nav__btn');
+const tabBtns = document.querySelectorAll('.main-nav__btn');
 const indicator = document.querySelector('.main-nav__indicator');
 const tabList = document.querySelector('[role="tablist"]');
 const nav = document.querySelector('.main-nav');
@@ -41,7 +41,7 @@ tabList.addEventListener('keydown', e => {
 });
 
 
-function changeToTab(id, btn) {
+function changeToTab(id) {
     if (isSwapping) return;
     isSwapping = true;
 
@@ -102,7 +102,7 @@ window.addEventListener('resize', () => moveIndicator(document.querySelector('.m
 for (const btn of tabBtns) {
     btn.addEventListener('click', () => {
         if (!btn.classList.contains('main-nav__btn--selected')) {
-            changeToTab(getActiveTabId(btn), btn);
+            changeToTab(getActiveTabId(btn));
         }
     })
 }
