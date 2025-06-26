@@ -1,10 +1,16 @@
 :root {
     --text-color: #000;
     --outline-color: #090909;
+    --background-color: #fff;
+    --animation-delay: 0.3s;
 }
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
 }
 
 .main-nav {
@@ -18,6 +24,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    position: relative;
 }
 
 .main-nav__btn {
@@ -27,35 +34,86 @@
     opacity: 0.5;
     padding: 0 1.5rem;
     border-radius: 8px;
-}
-
-.main-nav__btn--selected {
-  border-bottom: 2px solid var(--outline-color);
-  opacity: 1;
-  padding: 0 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-bottom: 2px solid var(--background-color);
+    transition: opacity var(--animation-delay),
+                background-color var(--animation-delay),
+                box-shadow var(--animation-delay),
+                border-bottom var(--animation-delay);
 }
 
 .main-nav__btn:hover {
     cursor: pointer;
+    opacity: 0.75;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.main-nav__btn--selected,
+.main-nav__btn--selected:hover {
+  opacity: 1;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.tabs__container {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
 }
 
 .tab {
     padding: 1.5rem;
-    border-radius:8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    background-color: #fff;
     min-height: 300px;
     width: 80%;
     margin: 0 auto;
     display: none;
 }
 
+.nav-indicator{
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 90px;
+  background: var(--outline-color);
+  border-radius: 2px;
+  transition: transform var(--animation-delay) ease,
+              width var(--animation-delay) ease;
+}
+
 .tab--selected {
   display: flex;
   flex-direction: column;
 }
+
+/* ANIMATION KEYFRAMES */
+@keyframes slideIn{
+  from{opacity: 0; transform: translateX(60px);}
+  to  {opacity: 1; transform: translateX(0);}
+}
+@keyframes slideOut{
+  from{opacity: 1; transform: translateX(0);}
+  to  {opacity: 0; transform: translateX(-60px);}
+}
+
+/* HELPER CLASSES FOR ANIMATION
+   CONTROLLED BY JS */
+.tab--enter {
+  display: flex;
+  flex-direction: column;
+  animation: slideIn var(--animation-delay) ease forwards;
+}
+
+.tab--leave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: slideOut var(--animation-delay) ease forwards;
+}
+
+/* BASIC TAB */
 
 .tab__p {
   width: 100%;
@@ -67,7 +125,7 @@
 
 /* COSMIC BLOCK */
 .cosmic {
-  background: #f8fbff;
+  background-color: #f8fbff;
   border: 1px solid #e1e8f0;
 }
 
@@ -105,7 +163,7 @@
 }
 
 .cosmic__button {
-  background: #3498db;
+  background-color: #3498db;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -116,12 +174,12 @@
 }
 
 .cosmic__button:hover {
-  background: #2980b9;
+  background-color: #2980b9;
   transform: translateY(-2px);
 }
 
 .cosmic__info {
-  background: #edf7ff;
+  background-color: #edf7ff;
   padding: 1rem;
   border-radius: 6px;
   border-left: 4px solid #3498db;
@@ -141,7 +199,7 @@
 
 /* RECIPE BLOCK */
 .recipe {
-  background: #fdf7ff;
+  background-color: #fdf7ff;
   border: 1px solid #e8d7f1;
 }
 
@@ -176,11 +234,11 @@
   cursor: pointer;
   padding: 0.25rem;
   border-radius: 4px;
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 
 .recipe__label:hover {
-  background: #f5eef9;
+  background-color: #f5eef9;
 }
 
 .recipe__radio, 
@@ -206,7 +264,7 @@
 }
 
 .recipe__action {
-  background: #9b59b6;
+  background-color: #9b59b6;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -216,16 +274,16 @@
   display: block;
   width: 100%;
   margin-top: 1rem;
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 
 .recipe__action:hover {
-  background: #8e44ad;
+  background-color: #8e44ad;
 }
 
 /* PIXEL-ART BLOCK */
 .pixel-art {
-  background: #fff8f7;
+  background-color: #fff8f7;
   border: 1px solid #f5d5d0;
 }
 
@@ -270,7 +328,7 @@
   grid-template-columns: repeat(8, 1fr);
   gap: 1px;
   border: 2px solid #e0e0e0;
-  background: #e0e0e0;
+  background-color: #e0e0e0;
   margin: 0 auto;
   max-width: 400px;
 }
@@ -281,11 +339,11 @@
 
 .pixel-art__cell {
   aspect-ratio: 1/1;
-  background: #ffffff;
+  background-color: #ffffff;
   min-width: 25px;
   min-height: 25px;
   cursor: pointer;
-  transition: background 0.1s, transform 0.1s;
+  transition: background-color 0.1s, transform 0.1s;
 }
 
 .pixel-art__cell:hover {
