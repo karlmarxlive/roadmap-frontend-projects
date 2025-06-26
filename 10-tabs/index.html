@@ -7,25 +7,60 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <header class="header">
+        <h1>Interactive Tabs</h1>
+    </header>
     <main>
         <nav class="main-nav">
-            <ul class="main-nav__list">
-                <li class="main-nav__item"><button id="tab-1-btn" class="main-nav__btn main-nav__btn--selected">First Tab</button></li>
-                <li class="main-nav__item"><button id="tab-2-btn" class="main-nav__btn">Second Tab</button></li>
-                <li class="main-nav__item"><button id="tab-3-btn" class="main-nav__btn">Third Tab</button></li>
-                <li class="main-nav__item"><button id="tab-4-btn" class="main-nav__btn">Fourth Tab</button></li>
+            <ul class="main-nav__list" role="tablist" aria-label="Sample tabs">
+                <li class="main-nav__item"><button 
+                    id="tab-1-btn" 
+                    class="main-nav__btn main-nav__btn--selected" 
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="tab-1"
+                    tabindex="0">
+                    First Tab
+                </button></li>
+                <li class="main-nav__item"><button 
+                    id="tab-2-btn" 
+                    class="main-nav__btn"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab-2"
+                    tabindex="-1">
+                    Second Tab
+                </button></li>
+                <li class="main-nav__item"><button 
+                    id="tab-3-btn" 
+                    class="main-nav__btn"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab-3"
+                    tabindex="-1">
+                    Third Tab
+                </button></li>
+                <li class="main-nav__item"><button 
+                    id="tab-4-btn" 
+                    class="main-nav__btn"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="tab-4"
+                    tabindex="-1">
+                    Fourth Tab
+                </button></li>
                 <span class="nav-indicator"></span>
             </ul>
         </nav>
 
         <div class="tabs__container">
-            <div id="tab-1" class="tab basic-tab tab--selected">
+            <div id="tab-1" class="tab basic-tab tab--selected" role="tabpanel" tabindex="0" aria-labelledby="tab-1-btn">
                 <p class="tab__p">Clicking each tab should hide the content of the other tab and show the content of the clicked tab. By default, enable the first tab.</p>
-                <img class="tab__img" src="./src/1st-tab-img.png">
+                <img class="tab__img" src="./src/1st-tab-img.png" alt="Sample image">
                 <p class="tab__p">Add some dummy content or just simple text showing the tab.</p>
             </div>
 
-            <div id="tab-2" class="tab cosmic">
+            <div id="tab-2" class="tab cosmic" role="tabpanel" tabindex="0" aria-labelledby="tab-2-btn" hidden>
                 <h2 class="cosmic__title">🪐  Galactic Dad-Jokes  🛸</h2>
                 <ul class="joke-list">
                     <li class="joke-list__item"><strong>Q:</strong>  Why did the sun go to school?<br>
@@ -45,7 +80,7 @@
                     73 % extra comedy.</p>
             </div>
 
-            <div id="tab-3" class="tab recipe">
+            <div id="tab-3" class="tab recipe" role="tabpanel" tabindex="0" aria-labelledby="tab-3-btn" hidden>
                 <h2 class="recipe__title">🧑‍🍳  Speed-Run Recipe: 3-Minute Cookie-Dough Omelette</h2>
 
                 <h3>Ingredients (serves 1 highly confused person)</h3>
@@ -70,7 +105,7 @@
                     parallel universes.</p>
             </div>
 
-            <div id="tab-4" class="tab pixel-art">
+            <div id="tab-4" class="tab pixel-art" role="tabpanel" tabindex="0" aria-labelledby="tab-4-btn" hidden>
                 <h2 class="pixel-art__title">🍌  10 × 10 Pixel Banana  (because why not)</h2>
 
                 <div class="pixel-grid">
