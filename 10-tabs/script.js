@@ -74,7 +74,7 @@ function changeToTab(id, btn) {
 }
 
 function getActiveTabId(element) {
-    return element.id.replace(/tab-(\d)-btn/, (_, p) => `${p}`);
+    return element.dataset.tab;
 }
 
 function changeToBtn(nextBtn) {
