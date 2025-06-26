@@ -17,6 +17,7 @@ html {
     width: 100%;
     padding-top: 15%;
     margin: 0 auto;
+    padding-bottom: 0;
 }
 
 .main-nav__list {
@@ -57,10 +58,11 @@ html {
   position: relative;
   overflow: hidden;
   min-height: 300px;
+  padding-bottom: 1rem;
 }
 
 .tab {
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     background-color: #fff;
@@ -114,6 +116,9 @@ html {
 }
 
 /* BASIC TAB */
+.basic-tab {
+  border: 1px solid #e1e8f0;
+}
 
 .tab__p {
   width: 100%;
