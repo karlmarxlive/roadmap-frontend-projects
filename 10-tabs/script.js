@@ -1,6 +1,7 @@
 const tabBtns = document.getElementsByClassName('main-nav__btn');
 const indicator = document.querySelector('.main-nav__indicator');
 const tabList = document.querySelector('[role="tablist"]');
+const nav = document.querySelector('.main-nav');
 let isSwapping = false;
 
 const tabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
@@ -91,17 +92,12 @@ function changeToBtn(nextBtn) {
 
 function moveIndicator(btn){
   const btnRect = btn.getBoundingClientRect();
-  const ulRect  = btn.parentElement.parentElement.getBoundingClientRect();
+  const ulRect  = nav.getBoundingClientRect();
   indicator.style.width = `${btnRect.width}px`;
   indicator.style.transform = `translateX(${btnRect.left - ulRect.left}px)`;
 }
 moveIndicator(document.querySelector('.main-nav__btn--selected'));
-
-function updateIndicator() {
-    moveIndicator(document.querySelector('.main-nav__btn--selected'));
-}
-
-window.addEventListener('resize', updateIndicator);
+window.addEventListener('resize', () => moveIndicator(document.querySelector('.main-nav__btn--selected')));
 
 for (const btn of tabBtns) {
     btn.addEventListener('click', () => {

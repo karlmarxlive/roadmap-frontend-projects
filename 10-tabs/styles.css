@@ -1,8 +1,9 @@
 :root {
-    --text-color: #000;
-    --outline-color: #090909;
-    --background-color: #fff;
-    --animation-delay: 0.3s;
+  --text-color: #000;
+  --outline-color: #090909;
+  --background-color: #fff;
+  
+  --animation-delay: 0.3s;
 }
 
 *, *::before, *::after {
@@ -22,6 +23,7 @@ html {
     width: 100%;
     margin: 0 auto;
     padding: 0;
+    position: relative;
 }
 
 .main-nav__list {
