@@ -211,3 +211,8 @@ html {
   font-size: .85rem;
   margin-top: .5rem;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .tab--enter,
+  .tab--leave { animation: none; }
+}
