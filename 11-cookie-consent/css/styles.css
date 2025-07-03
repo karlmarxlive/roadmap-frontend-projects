@@ -1,0 +1,85 @@
+:root {
+    --cookies-background-color: black;
+    --cookies-text-color: white;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.page {
+    position: relative;
+    width: 95vw;
+    height: 95vh;
+}
+
+.cookies {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background-color: var(--cookies-background-color);
+    color: var(--cookies-text-color);
+    border-radius: 10px;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 250px;
+}
+
+.cookies__icon {
+    width: 50px;
+    align-self: flex-start;
+}
+
+.cookies__close-btn {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+  display: inline-block;
+}
+.cookies__close-btn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.cookies__close-btn:before, .cookies__close-btn:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 16px;
+  width: 2px;
+  background-color: white;
+}
+.cookies__close-btn:before {
+  transform: rotate(45deg);
+}
+.cookies__close-btn:after {
+  transform: rotate(-45deg);
+}
+
+.cookies__message {
+  font-size: large;
+  text-align: center;
+}
+
+.cookies__confirm-btn {
+  background-color: white;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+.cookies__confirm-btn:hover {
+  cursor: pointer;
+  background-color: #f3f4f5;
+}
+
+.cookies__confirm-btn:active {
+  background-color: var(--cookies-background-color);
+  color: var(--cookies-text-color);
+}
