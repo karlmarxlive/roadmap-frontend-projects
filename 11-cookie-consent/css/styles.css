@@ -65,9 +65,11 @@ html {
 }
 
 .cookies__close-btn {
+  background: none;
+  border: none;
   position: absolute;
   right: 20px;
-  top: 16px;
+  top: 5px;
   width: 16px;
   height: 16px;
   opacity: 0.5;
