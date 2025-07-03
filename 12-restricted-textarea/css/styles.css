@@ -1,0 +1,26 @@
+.page {
+    width: clamp(350, 40vw, 80vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__title {
+    padding-top: 2rem;
+}
+
+.textarea {
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.textarea__wrapper {
+    position: relative;
+}
+
+.textarea__counter {
+    font-size: small;
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+}
