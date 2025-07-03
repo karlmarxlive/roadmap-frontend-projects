@@ -55,6 +55,8 @@ html {
   align-items: center;
   width: 200px;
   height: 250px;
+
+  z-index: 1;
 }
 
 .cookies__icon {
