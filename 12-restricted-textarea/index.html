@@ -11,9 +11,9 @@
 <body>
     <main class="page">
         <h1 class="page__title">Write your message</h1>
-        <div class="textarea__wrapper">
-            <textarea class="textarea" cols="34" rows="5" placeholder="Start typing..."></textarea>
-            <p class="textarea__counter">0/250</p>
+        <div class="message">
+            <textarea class="message__input" cols="34" rows="5" placeholder="Start typing..." maxlength="25" aria-describedby="message-counter"></textarea>
+            <p class="message__counter" id="message-counter" aria-live="polite"></p>
         </div>
     </main>
     <script src="./js/script.js" defer></script>

@@ -1,26 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .page {
-    width: clamp(350, 40vw, 80vw);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: clamp(350px, 40vw, 80vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page__title {
-    padding-top: 2rem;
+  padding-top: 2rem;
 }
 
-.textarea {
-    border-radius: 10px;
-    padding: 0.5rem;
+.message__input {
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 
-.textarea__wrapper {
-    position: relative;
+.message__input--limit {
+  border-color: red;
+  color: red;
 }
 
-.textarea__counter {
-    font-size: small;
-    position: absolute;
-    bottom: 0;
-    right: 0.5rem;
+.message__input:focus-visible {
+  outline: 3px solid #2684ff;
+  outline-offset: 2px;
+}
+
+.message {
+  position: relative;
+}
+
+.message__counter--limit {
+  color: red;
+  font-weight: bold;
+}
+
+.message__counter {
+  font-size: small;
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
 }
