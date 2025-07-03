@@ -20,7 +20,7 @@ html {
 
 .page {
   position: relative;
-  width: clamp(40vw, 350px, 80vw);
+  width: clamp(450px, 35vw, 80vw);
   margin: 0 auto;
   padding-bottom: 2rem;
   display: flex;

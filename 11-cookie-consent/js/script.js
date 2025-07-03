@@ -6,6 +6,8 @@ if (localStorage.getItem('cookiesConfirmed')) {
     const cookiesCloseBtn = document.querySelector(".cookies__close-btn");
     const cookiesConfirmBtn = document.querySelector(".cookies__confirm-btn");
 
+    //cookiesWindow.focus();
+
     cookiesCloseBtn.addEventListener("click", () => {
         cookiesWindow.remove();
     });
@@ -14,6 +16,11 @@ if (localStorage.getItem('cookiesConfirmed')) {
         localStorage.setItem('cookiesConfirmed', true);
         cookiesWindow.remove();
     });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') cookiesWindow.remove();
+    });
+
 }
 
 
