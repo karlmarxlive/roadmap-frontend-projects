@@ -1,37 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 :root {
-    --cookies-background-color: black;
-    --cookies-text-color: white;
+  --cookies-background-color: black;
+  --cookies-text-color: white;
+
+  --text-font: "Funnel Sans", sans-serif;
+  --header-font: "Funnel Display", sans-serif;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 .page {
-    position: relative;
-    width: 95vw;
-    height: 95vh;
+  position: relative;
+  width: clamp(40vw, 350px, 80vw);
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-family: var(--text-font);
+}
+
+.header__header,
+.main__header {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.header__header,
+.main__header,
+.main__subheader {
+  font-family: var(--header-font);
 }
 
 .cookies {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    background-color: var(--cookies-background-color);
-    color: var(--cookies-text-color);
-    border-radius: 10px;
-    padding: 0 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 200px;
-    height: 250px;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  background-color: var(--cookies-background-color);
+  color: var(--cookies-text-color);
+  border-radius: 10px;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  height: 250px;
 }
 
 .cookies__icon {
-    width: 50px;
-    align-self: flex-start;
+  width: 50px;
+  align-self: flex-start;
 }
 
 .cookies__close-btn {
@@ -47,10 +75,11 @@
   opacity: 1;
   cursor: pointer;
 }
-.cookies__close-btn:before, .cookies__close-btn:after {
+.cookies__close-btn:before,
+.cookies__close-btn:after {
   position: absolute;
   left: 15px;
-  content: ' ';
+  content: " ";
   height: 16px;
   width: 2px;
   background-color: white;
