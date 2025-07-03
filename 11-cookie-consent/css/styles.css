@@ -29,15 +29,15 @@ html {
   font-family: var(--text-font);
 }
 
-.header__header,
-.main__header {
+.header__title,
+.main__title {
   text-align: center;
   padding-top: 2rem;
 }
 
-.header__header,
-.main__header,
-.main__subheader {
+.header__title,
+.main__title,
+.main__subtitle {
   font-family: var(--header-font);
 }
 
