@@ -11,189 +11,173 @@
         <h1 class="header__title">FAQ</h1>
         <p class="header__message">Here are some of the frequently asked questions</p>
     </header>
-    <main class="faq">
-        <div class="faq__item">
-            <button 
-                class="faq__question" 
-                aria-expanded="false"
-                aria-controls="faq-answer-1"
-            >
-                <span class="faq__question-row">
+    <main class="faq-container">
+        <ul class="faq">
+            <li class="faq__item">
+                <button 
+                    class="faq__question" 
+                    aria-expanded="false"
+                    aria-controls="faq-answer-1"
+                >
                     <span class="faq__question-text">What is roadmap.sh?</span>
                     <span class="faq__question-icon" aria-hidden="true">▼</span>
-                </span>
-            </button>
-            <div 
-                class="faq__answer-wrapper" 
-                id="faq-answer-1"
-            >
-                <div class="faq__answer">
-                    <p>roadmap.sh contains community-curated roadmaps, study plans, paths, and resources for developers. There are role-based roadmaps, listing skills you should know for any given role, as well as skill-based roadmaps listing items to learn for any given skill.</p>
-                    <p>It started as a set of visual charts on GitHub to guide developers who are confused about what they should learn next, but then expanded into interactive roadmaps where you can click and get resources to learn any given resource, contribute by adding new roadmaps, suggest changes to existing roadmaps, track your progress as you follow a roadmap and so on.</p>
+                </button>
+                <div 
+                    class="faq__answer-wrapper" 
+                    id="faq-answer-1"
+                >
+                    <div class="faq__answer">
+                        <p>roadmap.sh contains community-curated roadmaps, study plans, paths, and resources for developers. There are role-based roadmaps, listing skills you should know for any given role, as well as skill-based roadmaps listing items to learn for any given skill.</p>
+                        <p>It started as a set of visual charts on GitHub to guide developers who are confused about what they should learn next, but then expanded into interactive roadmaps where you can click and get resources to learn any given resource, contribute by adding new roadmaps, suggest changes to existing roadmaps, track your progress as you follow a roadmap and so on.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="faq__item">
-            <button 
-                class="faq__question" 
-                aria-expanded="false"
-                aria-controls="faq-answer-2"
-            >
-                <span class="faq__question-row">
+            </li>
+            <li class="faq__item">
+                <button 
+                    class="faq__question" 
+                    aria-expanded="false"
+                    aria-controls="faq-answer-2"
+                >
                     <span class="faq__question-text">How are roadmaps created?</span>
                     <span class="faq__question-icon" aria-hidden="true">▼</span>
-                </span>
-            </button>
-            <div 
-                class="faq__answer-wrapper" 
-                id="faq-answer-2"
-            >
-                <div class="faq__answer">
-                    <p>The project has a strong community that powers everything on the website. It is the 6th most starred opensource project on GitHub and gets visited by hundreds of thousands of developers every month. We also have newsletter with 150,000+ developers. All the roadmaps are created and reviewed by community and several subject matter experts. Also, anyone can suggest changes to any roadmap and we have a process to review and approve them.</p>
+                </button>
+                <div 
+                    class="faq__answer-wrapper" 
+                    id="faq-answer-2"
+                >
+                    <div class="faq__answer">
+                        <p>The project has a strong community that powers everything on the website. It is the 6th most starred opensource project on GitHub and gets visited by hundreds of thousands of developers every month. We also have newsletter with 150,000+ developers. All the roadmaps are created and reviewed by community and several subject matter experts. Also, anyone can suggest changes to any roadmap and we have a process to review and approve them.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="faq__item">
-            <button 
-                class="faq__question" 
-                aria-expanded="false"
-                aria-controls="faq-answer-3"
-            >
-                <span class="faq__question-row">
+            </li>
+            <li class="faq__item">
+                <button 
+                    class="faq__question" 
+                    aria-expanded="false"
+                    aria-controls="faq-answer-3"
+                >
                     <span class="faq__question-text">What are the plans for roadmap.sh? </span>
                     <span class="faq__question-icon" aria-hidden="true">▼</span>
-                </span>
-            </button>
-            <div 
-                class="faq__answer-wrapper" 
-                id="faq-answer-3"
-            >
-                <div class="faq__answer">
-                    <p>Our long-term plan is to make roadmap.sh a go-to place for developers whenever they plan on learning something new. We started with roadmaps, guides, videos and other visual content but we plan on introducing best practices, best-practices for certain tasks, quizzes to test your knowledge and prepare yourself for the interviews, project ideas to work on while following the roadmaps, public profiles to share your progress and interact with the other learners and so on.</p>
+                </button>
+                <div 
+                    class="faq__answer-wrapper" 
+                    id="faq-answer-3"
+                >
+                    <div class="faq__answer">
+                        <p>Our long-term plan is to make roadmap.sh a go-to place for developers whenever they plan on learning something new. We started with roadmaps, guides, videos and other visual content but we plan on introducing best practices, best-practices for certain tasks, quizzes to test your knowledge and prepare yourself for the interviews, project ideas to work on while following the roadmaps, public profiles to share your progress and interact with the other learners and so on.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="faq__item">
-            <button 
-                class="faq__question" 
-                aria-expanded="false"
-                aria-controls="faq-answer-4"
-            >
-                <span class="faq__question-row">
+            </li>
+            <li class="faq__item">
+                <button 
+                    class="faq__question" 
+                    aria-expanded="false"
+                    aria-controls="faq-answer-4"
+                >
                     <span class="faq__question-text">How is roadmap.sh built?</span>
                     <span class="faq__question-icon" aria-hidden="true">▼</span>
-                </span>
-            </button>
-            <div 
-                class="faq__answer-wrapper" 
-                id="faq-answer-4"
-            >
-                <div class="faq__answer">
-                    <p>The website is built with Astro and Tailwind and is deployed to GitHub pages. The project is open-core and the codebase can be found on GitHub</p>
+                </button>
+                <div 
+                    class="faq__answer-wrapper" 
+                    id="faq-answer-4"
+                >
+                    <div class="faq__answer">
+                        <p>The website is built with Astro and Tailwind and is deployed to GitHub pages. The project is open-core and the codebase can be found on GitHub</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="faq__item">
-            <button 
-                class="faq__question" 
-                aria-expanded="false"
-                aria-controls="faq-answer-5"
-            >
-                <span class="faq__question-row">
+            </li>
+            <li class="faq__item">
+                <button 
+                    class="faq__question" 
+                    aria-expanded="false"
+                    aria-controls="faq-answer-5"
+                >
                     <span class="faq__question-text">How can I add a new roadmap?</span>
                     <span class="faq__question-icon" aria-hidden="true">▼</span>
-                </span>
-            </button>
-            <div 
-                class="faq__answer-wrapper" 
-                id="faq-answer-5"
-            >
-                <div class="faq__answer">
-                    <p>For new roadmaps, please open an issue with the textual description of the roadmap in the form of bulleted list. Here is an example contribution of a new roadmap.</p>
-                    <p>Find more details in the contribution docs.</p>
+                </button>
+                <div 
+                    class="faq__answer-wrapper" 
+                    id="faq-answer-5"
+                >
+                    <div class="faq__answer">
+                        <p>For new roadmaps, please open an issue with the textual description of the roadmap in the form of bulleted list. Here is an example contribution of a new roadmap.</p>
+                        <p>Find more details in the contribution docs.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="faq__item">
-            <button 
-                class="faq__question" 
-                aria-expanded="false"
-                aria-controls="faq-answer-6"
-            >
-                <span class="faq__question-row">
+            </li>
+            <li class="faq__item">
+                <button 
+                    class="faq__question" 
+                    aria-expanded="false"
+                    aria-controls="faq-answer-6"
+                >
                     <span class="faq__question-text">How can I update an existing roadmap?</span>
                     <span class="faq__question-icon" aria-hidden="true">▼</span>
-                </span>
-            </button>
-            <div 
-                class="faq__answer-wrapper" 
-                id="faq-answer-6"
-            >
-                <div class="faq__answer">
-                    <p>Please have a look at the contribution docs for details.</p>
+                </button>
+                <div 
+                    class="faq__answer-wrapper" 
+                    id="faq-answer-6"
+                >
+                    <div class="faq__answer">
+                        <p>Please have a look at the contribution docs for details.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="faq__item">
-            <button 
-                class="faq__question" 
-                aria-expanded="false"
-                aria-controls="faq-answer-7"
-            >
-                <span class="faq__question-row">
+            </li>
+            <li class="faq__item">
+                <button 
+                    class="faq__question" 
+                    aria-expanded="false"
+                    aria-controls="faq-answer-7"
+                >
                     <span class="faq__question-text">How can I add content to existing roadmaps?</span>
                     <span class="faq__question-icon" aria-hidden="true">▼</span>
-                </span>
-            </button>
-            <div 
-                class="faq__answer-wrapper" 
-                id="faq-answer-7"
-            >
-                <div class="faq__answer">
-                    <p>Please have a look at the contribution docs for details.</p>
+                </button>
+                <div 
+                    class="faq__answer-wrapper" 
+                    id="faq-answer-7"
+                >
+                    <div class="faq__answer">
+                        <p>Please have a look at the contribution docs for details.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="faq__item">
-            <button 
-                class="faq__question" 
-                aria-expanded="false"
-                aria-controls="faq-answer-8"
-            >
-                <span class="faq__question-row">
+            </li>
+            <li class="faq__item">
+                <button 
+                    class="faq__question" 
+                    aria-expanded="false"
+                    aria-controls="faq-answer-8"
+                >
                     <span class="faq__question-text">Can I redistribute the content?</span>
                     <span class="faq__question-icon" aria-hidden="true">▼</span>
-                </span>
-            </button>
-            <div 
-                class="faq__answer-wrapper" 
-                id="faq-answer-8"
-            >
-                <div class="faq__answer">
-                    <p>No, the license of the content on this website does not allow you to redistribute any of the content on this website anywhere. You can use it for personal use or share the link to the content if you have to but redistribution is not allowed.</p>
+                </button>
+                <div 
+                    class="faq__answer-wrapper" 
+                    id="faq-answer-8"
+                >
+                    <div class="faq__answer">
+                        <p>No, the license of the content on this website does not allow you to redistribute any of the content on this website anywhere. You can use it for personal use or share the link to the content if you have to but redistribution is not allowed.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="faq__item">
-            <button 
-                class="faq__question" 
-                aria-expanded="false"
-                aria-controls="faq-answer-9"
-            >
-                <span class="faq__question-row">
+            </li>
+            <li class="faq__item">
+                <button 
+                    class="faq__question" 
+                    aria-expanded="false"
+                    aria-controls="faq-answer-9"
+                >
                     <span class="faq__question-text">What is the best way to contact you? </span>
                     <span class="faq__question-icon" aria-hidden="true">▼</span>
-                </span>
-            </button>
-            <div 
-                class="faq__answer-wrapper" 
-                id="faq-answer-9"
-            >
-                <div class="faq__answer">
-                    <p>Tweet or send me a message @kamrify or email me at kamranahmed.se@gmail.com. I get lots of messages so apologies in advance if you don't hear back from me soon but I do reply to everyone.</p>
+                </button>
+                <div 
+                    class="faq__answer-wrapper" 
+                    id="faq-answer-9"
+                >
+                    <div class="faq__answer">
+                        <p>Tweet or send me a message @kamrify or email me at kamranahmed.se@gmail.com. I get lots of messages so apologies in advance if you don't hear back from me soon but I do reply to everyone.</p>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </li>
+        </ul>
     </main>
 
     <script src="./script.js"></script>
